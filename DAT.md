@@ -78,7 +78,7 @@ end
         - scale target ref: voteapp
         - CPU utilisation %: 70
 ## zone DNS
-aks.university-of-common-sense.space
+aks2.university-of-common-sense.space
 
 ## éléments déployés sur azure
 
