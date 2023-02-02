@@ -3,35 +3,7 @@
 
 ![](https://i.imgur.com/9rFM7io.png)
 
-```mermaid
-flowchart LR
-subgraph kuber [cluster kubernetes]
-ippub[ip publique]---AG---n1 & n2 & n3 & n4
-subgraph VMSS
-n1[node 1]
-n2[node 2]
-n3[node 3]
-n4[node 4]
-end
-subgraph K8s
-kublet-.-clstipvt & pod1 & pod2 & pod3 & ingress & strcl & clstiprd & scrmdp
-clstipvt[cluster IP\nvote]
-pod1[redis]
-pod2[vote]
-pod3[...]
-ingress
-strcl[storage\nclass]
-clstiprd[clusterip\nredis]
-scrmdp["secret mdp \n redis"]
-end
-AG-.-ingress---clstipvt---pod2 & pod3
-clstiprd---pod1
-clstiprd---clstipvt
-pod1--persistant_storage---strcl---DD
-pod1 & pod2 & pod3 -..- VMSS
-end
- classDef null fill:#000,width: 1;
-```
+
 ## Objectifs
  utiliser kubernetes et azure pour déployer une application de vote, une base de donnée redis, un stockage persistant pour la abse de donnée. l'application de vote doit être disponible via notre zone DNS en passant par une application gateway connecter à kubernetes avec un ingress.
  
