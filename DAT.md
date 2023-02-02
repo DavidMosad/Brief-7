@@ -14,7 +14,7 @@ n3[node 3]
 n4[node 4]
 end
 subgraph K8s
-kublet-.-clstipvt & pod1 & pod2 & pod3 & ingress & strcl & clstiprd & scrmdp & scrcert
+kublet-.-clstipvt & pod1 & pod2 & pod3 & ingress & strcl & clstiprd & scrmdp
 clstipvt[cluster IP\nvote]
 pod1[redis]
 pod2[vote]
@@ -23,7 +23,6 @@ ingress
 strcl[storage\nclass]
 clstiprd[clusterip\nredis]
 scrmdp["secret mdp \n redis"]
-scrcert[secret\ncertificat SSL]
 end
 AG-.-ingress---clstipvt---pod2 & pod3
 clstiprd---pod1
