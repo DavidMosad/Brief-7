@@ -5,9 +5,16 @@
 
 
 ## Objectifs
- utiliser kubernetes et azure pour déployer une application de vote, une base de donnée redis, un stockage persistant pour la abse de donnée. l'application de vote doit être disponible via notre zone DNS en passant par une application gateway connecter à kubernetes avec un ingress.
+
+- Déploiement automatique d'une application de vote pour correspondre aux dernières MAJ de l'application sur Dockerhub
+- Utilisation de Kubernetes et Azure pour le déploiement de l'application
+- BDD Redis avec stockage persistant
+- Création d'un DNS qui passe par une Application Gateway pour se connecter a Kubernetes
+- Cluster Kubernetes relié par un ingress à l'application Gateway
+- Mise en place d'une pipeline en utilisant Azure DevOps
+
  
-## listes des éléments déployé avec kubernetes
+## Eléments déployés par Kurbernetes
 
 
 - storage
@@ -48,7 +55,7 @@
         - min replicas: 2
         - scale target ref: voteapp
         - CPU utilisation %: 70
-## zone DNS
+## FQDN
 aks2.university-of-common-sense.space
 
 ## éléments déployés sur azure
