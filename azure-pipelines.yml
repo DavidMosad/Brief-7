@@ -36,7 +36,7 @@ steps:
       echo "##vso[task.setvariable variable=vernew]$versionnew"
       echo "##vso[task.setvariable variable=verold]$versionold"
       cd /home/vsts
-      git clone git@github.com:DavidMosad/Brief-7.git
+      git clone https://github.com/DavidMosad/Brief-7.git
       cd Brief-7/kubernetes
       sed -i 's/{{ version }}/'$versionnew'/g' votingapp.yaml
       echo $versionnew
